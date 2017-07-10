@@ -1,0 +1,38 @@
+<md-tabs layout-fill md-border-bottom md-center-tabs md-dynamic-height="false">
+    <md-tab>
+        <md-tab-label>
+            <i class="material-icons">equalizer</i>
+        </md-tab-label>
+        <md-tab-body class="md-padding">
+            <div layout="row" layout-align="center center">
+                <md-input-container>
+                    <h3 class="md-title">Référence : </h3>
+                    <md-select ng-model="$ctrl.ref" ng-model-options="{trackBy: '$value.name'}" aria-label="sélectionner la référence">
+                        <md-option ng-value="ref" ng-repeat="ref in  $ctrl.barReferences">{{ ref.name }}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <div layout-fill layout="row" layout-align="center center">
+                <canvas flex="50" id="bar" class="chart chart-bar" chart-data="$ctrl.ref.data" chart-labels="$ctrl.labels" chart-series="$ctrl.ref.series" chart-options="$ctrl.options"></canvas>
+            </div>
+        </md-tab-body>
+    </md-tab>
+    <md-tab>
+        <md-tab-label>
+            <i class="material-icons">timeline</i>
+        </md-tab-label>
+        <md-tab-body class="md-padding">
+            <div layout="row" layout-align="center center">
+                <md-input-container>
+                    <h3 class="md-title">Référence : </h3>
+                    <md-select ng-model="$ctrl.ref2" ng-model-options="{trackBy: '$value.name'}" aria-label="sélectionner la référence">
+                        <md-option ng-value="ref2" ng-repeat="ref2 in  $ctrl.lineReferences">{{ ref2.name }}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <div layout-fill layout="row" layout-align="center center">
+                <canvas flex="50" id="line" class="chart chart-line" chart-data="$ctrl.ref2.data2" chart-labels="$ctrl.labels2" chart-series="$ctrl.ref2.series2" chart-options="$ctrl.options2" chart-colors="$ctrl.lineColors" chart-dataset-override="$ctrl.datasetOverride"></canvas>
+            </div>
+        </md-tab-body>
+    </md-tab>
+</md-tabs>

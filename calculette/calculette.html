@@ -1,0 +1,26 @@
+<div layout="row" layout-paddding layout-margin layout-align="center center" md-whiteframe>
+    <div layout="column" layout-paddding>
+        <md-input-container>
+            <label>Total référence</label>
+            <input ng-model="$ctrl.totalRef" type="number">
+        </md-input-container>
+
+        <md-input-container>
+            <label>Total candidats-termes</label>
+            <input ng-model="$ctrl.total" type="number">
+        </md-input-container>
+
+        <md-input-container>
+            <label>Vrais positifs</label>
+            <input ng-model="$ctrl.correct" type="number"></md-input-container>
+
+        <md-button class="md-raised md-accent" ng-click="$ctrl.perf()">Calcul</md-button>
+    </div>
+    <div layout="column" layout-padding class="niceborder">
+        <span>Bruit = {{$ctrl.bruit}} <span>CT<md-tooltip md-direction="right">candidats-termes</md-tooltip></span></span>
+        <span>Silence = {{$ctrl.silence}} <span>CT<md-tooltip md-direction="right">candidats-termes</md-tooltip></span></span>
+        <span>Précision = {{$ctrl.precision}}</span>
+        <span>Rappel = {{$ctrl.rappel}}</span>
+        <span>F-mesure = {{$ctrl.Fmesure}}</span>
+    </div>
+</div>

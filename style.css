@@ -1,0 +1,37 @@
+.nomarginbot {
+    margin-bottom: 0px;
+}
+
+.niceborder {
+    border: 1px solid #ccc;
+    border-radius: 16px;
+}
+
+input[type=number] {
+    -moz-appearance: textfield !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.alert-info {
+    padding: 8px 35px 8px 14px;
+    margin-bottom: 18px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    border: 1px solid #fbeed5;
+    border-radius: 4px;
+    color: #3a87ad;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.active {
+    text-decoration: underline;
+}

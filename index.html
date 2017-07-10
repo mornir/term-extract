@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Extraction automatique</title>
+    <script src="https://code.angularjs.org/1.5.8/angular.js"></script>
+    <script src="https://code.angularjs.org/1.5.8/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/1.0.3/angular-chart.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+
+    <!-- Controllers -->
+    <script src="./auto/auto.js"></script>
+    <script src="./assurance/assurance.js"></script>
+    <script src="./materiel/materiel.js"></script>
+    <script src="./calculette/calculette.js"></script>
+
+    <!-- Main Module -->
+    <script src="main.js"></script>
+
+</head>
+
+<body ng-app="app">
+    <div layout="column" layout-fill>
+
+        <md-toolbar>
+            <div class="md-toolbar-tools" layout-padding>
+
+                <a ui-sref="auto" ui-sref-active="active">Corpus auto</a>
+                <a ui-sref="assurance" ui-sref-active="active">Corpus assurance</a>
+                <a ui-sref="materiel" ui-sref-active="active">Matériel d'évaluation</a>
+                <a ui-sref="calculette" ui-sref-active="active">Calculette</a>
+                <span flex></span>
+                <a ui-sref="apropos" ui-sref-active="active">À propos de ce site</a>
+
+            </div>
+        </md-toolbar>
+
+        <ui-view flex layout-fill layout="column" layout-align="center center"></ui-view>
+
+        <md-toolbar layout="row" layout-align="center center">
+            <span>
+                &copy; 2016 Jérôme Pott - Travail de mémoire - Université de Genève
+            </span>
+        </md-toolbar>
+
+    </div>
+</body>
+
+</html>
